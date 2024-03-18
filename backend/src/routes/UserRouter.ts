@@ -12,7 +12,7 @@ import {
 const UserRouter = Router();
 
 UserRouter.get('/users', getAllUsers);
-UserRouter.post('/users', createUserValidationMiddleware, createUser);
+UserRouter.post('/users/create', createUserValidationMiddleware, createUser);
 UserRouter.put('/users/:id', updateUserValidationMiddleware, updateUser);
 
 export default UserRouter;
