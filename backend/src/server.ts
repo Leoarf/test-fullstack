@@ -3,7 +3,7 @@ import UserRouter from './routes/UserRouter';
 import cors from 'cors';
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 4000;
 const corsOptions = {
   origin: 'http://localhost:3000',
   credentials: true,
