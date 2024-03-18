@@ -1,41 +1,39 @@
-# Teste Fullstack: Aplicativo de Gerenciamento de Clientes
+# Full Stack Application
 
-## Descrição:
+Este é um projeto full stack dividido em duas partes: o **backend** e o **frontend**. Antes de rodar o projeto, siga as instruções abaixo para configurar e instalar as dependências necessárias.
 
-Neste desafio, você deverá desenvolver um aplicativo fullstack que permita aos usuários visualizar e criar clientes. O aplicativo consiste em duas partes: o frontend e o backend. O frontend será responsável pela interface do usuário e a comunicação com a API. O backend será responsável pelo armazenamento e gerenciamento dos dados dos clientes.
+## Rodando o Projeto
 
-## Requisitos do Frontend:
+### Backend
 
-1. Exibir uma listagem de clientes contendo todas as informações conforme o layout fornecido.
-2. Permitir a criação de um novo cliente através de um formulário.
-3. Na tela de edição, fornecer alertas para o usuário em caso de dados inválidos.
-4. Realizar validação de CPF e telefone na tela de edição para garantir dados corretos e consistentes.
-5. Comunicar-se com a API para obter os dados dos clientes cadastrados.
+Para rodar o backend, siga estas etapas:
 
-## Requisitos do Backend:
+1. **Instalação de Dependências:** Na raiz do projeto, navegue até a pasta `backend` executando o seguinte comando:
 
-Criar uma API que ofereça endpoints para:
+```bash
+cd backend
+npm install
+```
 
-1. Obter a listagem de clientes cadastrados.
-2. Cadastrar um novo cliente com informações válidas.
-3. Atualizar informações de cliente existente.
-4. Armazenar os dados do cliente de forma persistente, com sugestão de uso do SQLite para essa finalidade.
+Configuração do Banco de Dados: Por padrão, o banco de dados roda na porta 4000. Você pode alterar isso no arquivo .env dentro da raiz do projeto backend. Caso altere, lembre-se de atualizar a URL correspondente no arquivo .env.local na raiz do projeto frontend.
 
-## Requisitos de Qualidade de Código:
+Arquivos de Configuração: Dentro da raiz do projeto backend, você encontrará um arquivo .env.example que mostra como configurar as variáveis de ambiente. Certifique-se de criar um arquivo .env com as configurações apropriadas.
 
-Escreva um código limpo, legível e bem organizado.
-Adote boas práticas de desenvolvimento e arquitetura.
+Para mais especificações sobre o backend, consulte o README dentro da pasta backend.
 
-## Itens Desejáveis (opcional):
+### Frontend
 
-- Testes unitários
-- Bibliotecas ou frameworks adicionais
+Para rodar o frontend, siga estas etapas:
 
-## Telas:
+2 **Instalação de Dependências:** Na raiz do projeto, navegue até a pasta `frontend` executando o seguinte comando:
 
-- [Tela Inicial](https://test-frontend-uolpp.web.app/assets/images/tela-inicial.jpg)
-- [Tela de Edição](https://test-frontend-uolpp.web.app/assets/images/tela-edicao.jpg)
+```bash
+cd frontend
+npm install
+```
 
-## Instruções Finais:
+Arquivos de Configuração: Dentro da raiz do projeto frontend, você encontrará um arquivo .env.local.example que mostra como configurar a URL do backend. Renomeie-o para .env.local e ajuste a URL conforme necessário.
 
-Após concluir o desafio, crie um pull request neste repositório com duas pastas separadas: uma contendo o projeto frontend e outra com o projeto backend, para que possamos avaliar seu trabalho. Boa sorte!
+Para mais especificações sobre o frontend, consulte o README dentro da pasta frontend.
+
+Para rodar o projeto, é necessário seguir as etapas para ambos os lados, frontend e backend.
