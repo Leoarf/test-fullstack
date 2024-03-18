@@ -1,4 +1,5 @@
 import express from 'express';
+import UserRouter from './routes/UserRouter';
 import cors from 'cors';
 
 const app = express();
@@ -11,6 +12,7 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 app.use(express.json());
+app.use(UserRouter);
 
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
