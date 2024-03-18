@@ -1,3 +1,5 @@
+// Editclient.jsx
+
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import ClientPanel from '../../components/ClientPanel';
@@ -30,11 +32,17 @@ const Editclient: React.FC = () => {
 
   const handleSubmit = async (values: User) => {
     try {
-      if (userId) {
-        await axios.put(`http://localhost:4000/users/${userId}`, values);
-      } else {
-        await axios.post('http://localhost:4000/users/create', values);
-      }
+      const backendURL =
+        process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:4000';
+      const url = userId
+        ? `${backendURL}/users/${userId}`
+        : `${backendURL}/users/create`;
+      const method = userId ? 'PUT' : 'POST';
+      await axios({
+        method,
+        url,
+        data: values,
+      });
       router.push('/');
     } catch (error) {
       console.error('Erro(s) ao criar ou atualizar o usuário:', error);

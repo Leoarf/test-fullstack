@@ -12,7 +12,9 @@ const Index: React.FC = () => {
   useEffect(() => {
     async function fetchUsers() {
       try {
-        const response = await axios.get<User[]>('http://localhost:4000/users');
+        const backendURL =
+        process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:4000';
+        const response = await axios.get<User[]>(`${backendURL}/users`);
         setUsers(response.data);
       } catch (error) {
         console.error('Erro(s) ao buscar usuários:', error);
