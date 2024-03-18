@@ -29,7 +29,6 @@ const Editclient: React.FC = () => {
   }, [router, router.query]);
 
   const handleSubmit = async (values: User) => {
-    console.log(values);
     try {
       if (userId) {
         await axios.put(`http://localhost:4000/users/${userId}`, values);
