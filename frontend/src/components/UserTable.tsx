@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { User } from '@/utils/validationSchema';
+import { User } from '../utils/validationSchema';
 
 interface UserTableProps {
   users: User[];

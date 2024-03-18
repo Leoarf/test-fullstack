@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
-import ClientPanel from '@/components/ClientPanel';
-import FormikForm from '@/components/FormikForm';
-import Header from '@/components/Header';
-import { User, validationSchema } from '@/utils/validationSchema';
+import ClientPanel from '../../components/ClientPanel';
+import FormikForm from '../../components/FormikForm';
+import Header from '../../components/Header';
+import { User, validationSchema } from '../../utils/validationSchema';
 import { Formik } from 'formik';
 import axios from 'axios';
 

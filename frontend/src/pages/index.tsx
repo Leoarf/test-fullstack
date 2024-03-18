@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Link from 'next/link';
-import Header from '@/components/Header';
-import ClientPanel from '@/components/ClientPanel';
-import UserTable from '@/components/UserTable';
-import { User } from '@/utils/validationSchema';
+import Header from '../components/Header';
+import ClientPanel from '../components/ClientPanel';
+import UserTable from '../components/UserTable';
+import { User } from '../utils/validationSchema';
 
 const Index: React.FC = () => {
   const [users, setUsers] = useState<User[]>([]);
